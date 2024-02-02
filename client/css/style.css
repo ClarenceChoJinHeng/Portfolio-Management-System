@@ -1,0 +1,45 @@
+/* ========== FONTS FROM GOOGLE ========== */
+
+/* ========== ROOT STYLES ========== */
+:root {
+}
+
+/* ========== RESET CSS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== GENERAL STYLES ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+p {
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
