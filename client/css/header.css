@@ -1,138 +1,122 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  /* border: 1px solid black; */
-}
+@import url(style.css);
 
-li {
-  list-style: none;
-}
-
-/* ======== BOX ICON ========= */
-.bx-menu,
-.bx-user {
-  font-size: 1.6rem;
-}
-
-.bx-x,
-.bx-search-alt-2 {
-  font-size: 1.7rem;
-}
-
-/* ======== HEADER CONTAINER ======== */
-
-.nav__container {
-  background: grey;
+/* MANAGED BY CLARENCE */
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 4rem;
-  position: fixed;
+  margin: 1.5rem;
 }
 
-/* ========= BURGER CONTAINER  ========= */
-
-.burger__logo__container {
+.nav__title {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 1rem;
-  transition: color 0.5s;
-  cursor: pointer;
-  /* padding: 10px; */
+  gap: 0.25rem;
 }
 
-.burger__container {
-  transform: translateY(9%);
-  margin-right: 0.5rem;
+.nav__logo {
+  font-size: 1rem;
 }
 
-/* =========== TITLE CONTAINER =========== */
-
-h1 {
-  font-size: 1.5rem;
+.bx-menu,
+.bxs-report,
+.bx-user-circle {
+  font-size: 1.25rem;
 }
 
-.logo__link {
-  text-decoration: none;
-  transition: color 0.5s;
+.nav__logo,
+.bxs-report {
+  color: var(--accent);
+  font-weight: 500;
 }
-
-/* ========= NAV MENU ========= */
 
 .nav__menu {
+  height: 21px;
+}
+
+.nav__desktop-links,
+.nav__button {
   display: none;
+}
+
+.nav__mobile-links {
+  background: var(--transparentGrey);
   position: absolute;
-  background: lightgrey;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  width: 100%;
-  z-index: 1;
-}
-
-.nav__container li {
-  padding: 1rem;
-  width: 50%;
-  margin-left: 2rem;
-}
-
-.nav__link {
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.5s;
-}
-
-/* <!-- ========== CLOSE MENU ========== --> */
-
-.close__container {
-  position: absolute;
-  inset: 0;
-  transform: translate(50%, 65%);
-  width: 8%;
-  height: 13%;
-}
-
-/* ========= SEARCH CONTAINER ========= */
-
-.search__account__container {
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin-right: 1.5rem;
-  position: relative;
+  gap: 1.75rem;
+  padding: 1.75rem 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px 0 var(--transparentGrey);
+  border: 1px solid black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.search__container {
-  transform: translateY(10%);
+.nav__mobile-links.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* ======== USER CONTAINER ========= */
-
-.user__container {
-  position: relative;
+.nav__mobile-links a {
+  color: black;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: 0.3s ease-in-out;
 }
 
-.account__container {
-  display: none;
-  position: absolute;
-  transform: translate(25%, 0%);
-  inset: 0;
+.nav__mobile-links a:hover {
+  color: var(--accent);
 }
 
-/* =========== HOVER DESIGN =========== */
+@media screen and (min-width: 576px) {
+  .nav__desktop-links {
+    display: flex;
+    gap: 2rem;
+  }
 
-.nav__link:hover {
-  color: rgb(120, 190, 300);
-  text-decoration: underline;
+  .nav__link {
+    color: black;
+    position: relative;
+    font-weight: 500;
+    font-size: 0.85rem;
+  }
+
+  .nav__button {
+    display: block;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--accent);
+    font-family: var(--font);
+    color: var(--White);
+    border-radius: 0.25rem;
+    font-weight: 500;
+  }
+
+  .nav__menu,
+  .nav__mobile-links {
+    display: none;
+  }
+
+  .nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--accent);
+    border-radius: 0.25rem;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav__link:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
-.logo__link:hover {
-  color: rgb(120, 190, 300);
-}
-
-/* =========== RESPONSIVE DESIGN ============ */

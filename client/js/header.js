@@ -1,23 +1,26 @@
-// ========= GET ID ===========
+const navMenu = document.querySelector(".nav__mobile-links");
+const hamburger = document.querySelector(".bx-menu");
 
-const OPEN__MENU = document.querySelector(".burger__container");
+// FUNCTIONS
+const toggleMenu = (e) => {
+  navMenu.classList.toggle("show");
+  e.stopPropagation(); // Stop the event from bubbling up to the body
+};
 
-const CLOSE__MENU = document.querySelector(".close__container");
+// Close the menu when clicking outside of it
+document.body.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.remove("show");
+  }
+});
 
-const NAV__MENU = document.querySelector(".nav__menu");
+hamburger.addEventListener("click", toggleMenu);
 
-// ============ EVENT LISTENER ============
+// REDIRECT TO LOGIN PAGE
+const redirectLoginBtn = document.querySelector(".nav__button");
 
-OPEN__MENU.addEventListener("click", show);
-CLOSE__MENU.addEventListener("click", close);
+const redirectLogin = () => {
+  window.location.href = "login.php";
+};
 
-// ============ MENU FUNCTION ==============
-
-function show() {
-  NAV__MENU.style.display = "initial";
-  NAV__MENU.style.top = "0";
-}
-
-function close() {
-  NAV__MENU.style.display = "none";
-}
+redirectLoginBtn.addEventListener("click", redirectLogin);
