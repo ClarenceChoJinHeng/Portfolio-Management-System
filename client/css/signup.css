@@ -1,0 +1,58 @@
+.signup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 3rem);
+  max-width: 500px;
+  border: 2px solid grey;
+  padding: 1rem;
+  border-radius: 0.85rem;
+}
+
+.signup__container h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form__inputs {
+  margin: 1.5rem 0;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form__input label {
+  font-size: 0.85rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  padding: 0.65rem;
+  margin-top: 0.5rem;
+  font-family: var(--font);
+  font-size: 0.75rem;
+}
+
+.submit__button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font);
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in-out;
+}
+
+.submit__button:hover {
+  background: var(--accent);
+  color: var(--White);
+  cursor: pointer;
+}

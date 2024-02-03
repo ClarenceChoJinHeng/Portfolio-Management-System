@@ -16,11 +16,26 @@ document.body.addEventListener("click", (e) => {
 
 hamburger.addEventListener("click", toggleMenu);
 
-// REDIRECT TO LOGIN PAGE
-const redirectLoginBtn = document.querySelector(".nav__button");
+document.addEventListener("DOMContentLoaded", () => {
+  // REDIRECT TO LOGIN PAGE
+  const redirectLoginBtn = document.querySelector(".nav__button");
+  const redirectLoginIcon = document.querySelector(".bx-user-circle");
 
-const redirectLogin = () => {
-  window.location.href = "login.php";
-};
+  const redirectLogin = () => {
+    window.location.href = "login.php";
+  };
 
-redirectLoginBtn.addEventListener("click", redirectLogin);
+  // IF THE CURRENT PAGE IS LOGIN HTML, CHANGE THE TEXT TO SIGNUP AND REDIRECT TO SIGNUP PAGE
+  if (window.location.pathname.includes("login.php")) {
+    redirectLoginBtn.textContent = "Signup";
+    redirectLoginBtn.addEventListener("click", () => {
+      window.location.href = "signup.php";
+    });
+    redirectLoginIcon.addEventListener("click", () => {
+      window.location.href = "signup.php";
+    });
+  } else {
+    redirectLoginBtn.addEventListener("click", redirectLogin);
+    redirectLoginIcon.addEventListener("click", redirectLogin);
+  }
+});

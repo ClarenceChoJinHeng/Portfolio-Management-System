@@ -24,6 +24,11 @@
   font-size: 1.25rem;
 }
 
+.bx-user-circle,
+.bx-menu {
+  cursor: pointer;
+}
+
 .nav__logo,
 .bxs-report {
   color: var(--accent);
@@ -89,11 +94,18 @@
   .nav__button {
     display: block;
     padding: 0.65rem 1.25rem;
-    background-color: var(--accent);
+    background: transparent;
     font-family: var(--font);
-    color: var(--White);
+    border: 1px solid var(--accent);
     border-radius: 0.25rem;
     font-weight: 500;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav__button:hover {
+    background: var(--accent);
+    color: var(--White);
+    cursor: pointer;
   }
 
   .nav__menu,
