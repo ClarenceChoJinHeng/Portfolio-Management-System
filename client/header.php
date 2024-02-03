@@ -1,5 +1,8 @@
+<!-- MANAGED BY CLARENCE -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,60 +15,36 @@
 
   <title>Header Page - Portfolio Management System</title>
 </head>
-<body>
-  <header>   
-    <nav class="nav__container">
-    <!-- ========== BURGER CONTAINER  ========== -->
 
-   <div class="burger__logo__container">
-      <div class="burger__container" >
-        <i class='bx bx-menu' ></i>
-      </div>
-
-      <!-- ========= TITLE CONTAINER ========== -->
-        <h1><a href="index.php" class="logo__link">Invexo</a></h1>
-     
-   </div>
-    <!-- ========== NAV MENU =========== -->
-
-    
-      <ul class="nav__menu">
-        <li><a href=index.php" class="nav__link" >Home</a></li>
-        <li><a href="portfolio.php" class="nav__link" >Portfolio</a></li>
-        <li><a href="about.php" class="nav__link" >About</a></li>
-        <li><a href="faq.php" class="nav__link" >FAQs</a></li>
-
-        <!-- ========== CLOSE MENU ========== -->
-
-        <div class="close__container" >
-        <i class='bx bx-x' ></i>
-        </div>
-
-      </ul>
-    
-
-    <!-- ========= SEARCH CONTAINER ========= -->
-    
-    <div class="search__account__container">
-
-    <div class="search__container" id="search__container">
-    <i class='bx bx-search-alt-2' ></i>
+<!-- HEADER -->
+<header class="header container">
+  <nav class="nav container">
+    <div class="nav__title">
+      <a href="index.php" class="nav__logo">Portfolio</a>
+      <i class='bx bxs-report'></i>
     </div>
 
-    <!-- ======== USER CONTAINER ========= -->
-
-    <div class="user__container">
-      <p class="login__button" id="login__button">LOGIN</p>
-      <div class="account__container">
-      <i class='bx bx-user' ></i>
+    <div class="nav__desktop-links">
+      <a href="index.php" class="nav__link">Home</a>
+      <a href="about.php" class="nav__link">About</a>
+      <a href="faq.php" class="nav__link">FAQs</a>
     </div>
+
+    <div class="nav__menu">
+      <i class='bx bx-user-circle'></i>
+      <i class='bx bx-menu'></i>
+    </div>
+
+    <button class="nav__button">Login</button>
+  </nav>
+
+  <div class="nav__mobile-links">
+    <a href="index.php" class="nav__link">Home</a>
+    <a href="about.php" class="nav__link">About</a>
+    <a href="faq.php" class="nav__link">FAQs</a>
   </div>
-</div>
-</nav>
 </header>
 
-<!-- ========= JavaScript Link ========== -->
+<!-- JAVASCRIPT -->
 <script src="js/header.js"></script>
-
-</body>
 </html>

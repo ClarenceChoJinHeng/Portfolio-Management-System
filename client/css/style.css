@@ -1,10 +1,18 @@
 /* ========== IMPORT CSS FILE ========== */
 
-
 /* ========== FONTS FROM GOOGLE ========== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /* ========== ROOT STYLES ========== */
 :root {
+  --text: hsl(273, 50%, 7%);
+  --background: hsl(274, 54%, 97%);
+  --primary: hsl(243, 63%, 79%);
+  --secondary: hsl(324, 50%, 72%);
+  --accent: hsl(344, 51%, 63%);
+  --transparentGrey: rgba(45, 45, 45, 0.1);
+  --font: "Poppins", sans-serif;
+  --White: #fff;
 }
 
 /* ========== RESET CSS ========== */
@@ -21,6 +29,8 @@ html {
 }
 
 body {
+  background: var(--background);
+  font-family: var(--font);
 }
 
 h1,
@@ -46,4 +56,11 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
 }

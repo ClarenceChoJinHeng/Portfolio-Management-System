@@ -1,3 +1,5 @@
+<!-- MANAGED BY JAKE -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,7 @@ include("header.php");
 
 <!-- THIS IS HOW YOU CAN INCLUDE FILES SO YOU CAN REUSE THEM (FOOTER) -->
 <?php
-include("footer.php");
+// include("footer.php");
 ?>
 
 </html>
