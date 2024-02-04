@@ -16,6 +16,15 @@
   letter-spacing: 1px;
 }
 
+#error-username,
+#error-email,
+#error-password,
+#error-age {
+  display: none;
+  color: red;
+  font-size: 0.75rem;
+}
+
 .form__inputs {
   margin: 1.5rem 0;
 }
