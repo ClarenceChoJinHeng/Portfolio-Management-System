@@ -10,7 +10,7 @@
   --primary: hsl(243, 63%, 79%);
   --secondary: hsl(324, 50%, 72%);
   --accent: hsl(344, 51%, 63%);
-  --transparentGrey: rgba(45, 45, 45, 0.1);
+  --transparentGrey: rgba(228, 223, 230, 255);
   --font: "Poppins", sans-serif;
   --White: #fff;
 }
