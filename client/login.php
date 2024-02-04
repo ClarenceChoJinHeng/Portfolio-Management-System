@@ -23,8 +23,8 @@ include("header.php");
                     <!-- USERNAME, AGE, EMAIL, PASSWORD -->
                     <div class="form__inputs">
                         <div class="form__input">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <label for="email">Email or Username</label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email">
                         </div>
                         <div class="form__input">
                             <label for="password">Password</label>

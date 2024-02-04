@@ -30,12 +30,39 @@
       <a href="faq.php" class="nav__link">FAQs</a>
     </div>
 
-    <div class="nav__menu">
-      <i class='bx bx-user-circle'></i>
-      <i class='bx bx-menu'></i>
-    </div>
+    <?php
 
-    <button class="nav__button">Login</button>
+    session_start();
+
+    if (isset($_SESSION['role'])) {
+      if (
+        $_SESSION['role'] == 'user' || $_SESSION['role'] == 'admin'
+      ) {
+        echo "
+          <div class='nav__username'>
+            <div>
+              <p>" . $_SESSION['username'] . "</p>
+              <i class='bx bx-chevron-down'></i>
+
+              <div class='nav__dropdown'>
+                <a href='../server/logout.php' class='nav__dropdown-links'>Logout</a>
+              </div>
+            </div>
+          </div>
+        ";
+      }
+    } else {
+      echo "
+      <div class='nav__menu'>
+        <i class='bx bx-user-circle'></i>
+        <i class='bx bx-menu'></i>
+      </div>
+
+      <button class='nav__button'>Login</button>
+    ";
+    }
+    ?>
+
   </nav>
 
   <div class="nav__mobile-links">
@@ -47,4 +74,5 @@
 
 <!-- JAVASCRIPT -->
 <script src="js/header.js"></script>
+
 </html>
