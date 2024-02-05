@@ -54,15 +54,19 @@
 
 .bx-chevron-down {
   font-size: 1.25rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bx-chevron-down.rotate {
+  transform: rotate(180deg);
 }
 
 .nav__dropdown {
   position: absolute;
   top: 2.5rem;
   border: 1px solid var(--accent);
-  width: 100%;
   max-width: 100px;
-  padding: 1.25rem 0;
+  padding: 1.25rem 1rem;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -71,6 +75,8 @@
   background: var(--transparentGrey);
   opacity: 0;
   visibility: hidden;
+  left: 50%;
+  transform: translateX(-50%);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
@@ -182,5 +188,11 @@
   .nav__link:hover::before {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    margin: 1.5rem 0;
   }
 }

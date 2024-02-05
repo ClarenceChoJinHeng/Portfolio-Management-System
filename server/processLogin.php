@@ -26,6 +26,7 @@ if (mysqli_num_rows($result) == 1) {
     $data = mysqli_fetch_array($result);
     $_SESSION['username'] = $data['username'];
     $_SESSION['email'] = $data['email'];
+    $_SESSION['id'] = $data['userID'];
 
     if ($data['role'] == 'admin') {
         $_SESSION['role'] = 'admin';
