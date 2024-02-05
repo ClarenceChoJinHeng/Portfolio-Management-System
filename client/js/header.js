@@ -57,16 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
 // TRIGGER DROPDOWN MENU
 const dropdownMenu = document.querySelector(".nav__dropdown");
 const dropdownBtn = document.querySelector(".nav__username");
+const chervonDown = document.querySelector(".bx-chevron-down");
 
 if (dropdownBtn) {
   dropdownBtn.addEventListener("click", () => {
     dropdownMenu.classList.add("show");
+    chervonDown.classList.add("rotate");
 
     // Close the dropdown when clicking outside of it
     document.body.addEventListener("click", (e) => {
       if (dropdownMenu && dropdownBtn) {
-        if (!dropdownMenu.contains(e.target) && !dropdownBtn.contains(e.target)) {
+        if (
+          !dropdownMenu.contains(e.target) &&
+          !dropdownBtn.contains(e.target)
+        ) {
           dropdownMenu.classList.remove("show");
+          chervonDown.classList.remove("rotate");
         }
       }
     });
