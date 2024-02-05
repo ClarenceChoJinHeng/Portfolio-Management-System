@@ -62,9 +62,12 @@
   border: 1px solid var(--accent);
   width: 100%;
   max-width: 100px;
-  padding: 1rem;
+  padding: 1.25rem 0;
   border-radius: 0.25rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
   background: var(--transparentGrey);
   opacity: 0;
   visibility: hidden;

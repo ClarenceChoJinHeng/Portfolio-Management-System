@@ -10,6 +10,7 @@
 <!-- THIS IS HOW YOU CAN INCLUDE FILES SO YOU CAN REUSE THEM (HEADER) -->
 <?php
 include("header.php");
+include("guard_members.php");
 ?>
 
 <body>
