@@ -28,7 +28,7 @@ if (!empty($_POST)) {
     $education_string = implode(", ", $escaped_education_values);
 
     // Check if the user has uploaded an image
-    if (!empty($image) or !empty($title) or !empty($description) or !empty($skills) or !empty($education_string)) {
+    if (!empty($image) and !empty($title) and !empty($description) and !empty($skills) and !empty($education_string)) {
         // Get the image file name
         $image_name = $_FILES['image']['name'];
 
