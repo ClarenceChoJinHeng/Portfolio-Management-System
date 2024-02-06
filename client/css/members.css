@@ -119,3 +119,124 @@ textarea {
   background: var(--accent);
   color: var(--White);
 }
+
+.retrieved__portfolio {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.no__portfolio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 500;
+}
+
+.portfolio__item {
+  width: 100%;
+  /* max-width: 350px; */
+  border: 1px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 0.85rem;
+  position: relative;
+}
+
+.portfolio__item img {
+  width: 100%;
+  border-radius: 0.85rem;
+}
+
+.portfolio__item h3 {
+  margin: 0.85rem 0 3.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.portfolio__buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 3rem);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+}
+
+.view-portfolio,
+.edit-portfolio,
+.delete-portfolio {
+  flex: 1;
+  padding: 0.65rem;
+  font-family: var(--font);
+  border-radius: 0.25rem;
+}
+
+.portfolio__details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.portfolio__details-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio__details {
+  width: 100%;
+  max-width: 500px;
+  margin-inline: 1.5rem;
+  background: var(--White);
+  padding: 2rem;
+  border-radius: 0.85rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.portfolio__details > div label {
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.portfolio__details > div label::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  bottom: -0.25rem;
+  left: 0;
+  border-radius: 0.25rem;
+}
+
+.portfolio__details > div p {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .retrieved__portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .retrieved__portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

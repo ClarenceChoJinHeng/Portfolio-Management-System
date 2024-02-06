@@ -84,7 +84,9 @@ include("guard_members.php");
 
             <!-- PHP WILL BE RETRIEVED PORTFOLIO -->
             <div class="retrieved__portfolio">
-
+                <?php
+                include("../server/retrievePortfolio.php");
+                ?>
             </div>
         </section>
     </main>
