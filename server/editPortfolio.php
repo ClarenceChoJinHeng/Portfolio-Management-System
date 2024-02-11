@@ -100,4 +100,7 @@ if (!empty($_POST)) {
             echo "<script>alert('Extension not allowed!'); window.history.back();</script>";
         }
     }
+
+    // CLOSE THE CONNECTION
+    mysqli_close($conn);
 }
