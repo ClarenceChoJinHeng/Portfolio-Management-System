@@ -105,6 +105,8 @@ if (mysqli_num_rows($result) > 0) {
                                 </div>
                             </div>
                         </div>
+
+                        <input type='hidden' name='portfolioID' value='" . $row['portfolioID'] . "'>
                         <!-- SUBMIT BUTTON -->
                         <button class='edit-portfolio-btn create-portfolio' type='submit'>Edit</button>
                     </div>
