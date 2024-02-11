@@ -175,7 +175,8 @@ textarea {
   border-radius: 0.25rem;
 }
 
-.portfolio__details-overlay {
+.portfolio__details-overlay,
+.edit__portfolio-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -189,14 +190,17 @@ textarea {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.portfolio__details-overlay.show {
+.portfolio__details-overlay.show,
+.edit__portfolio-container.show {
   opacity: 1;
   visibility: visible;
 }
 
-.portfolio__details {
+.portfolio__details,
+.edit__portfolio-content {
   width: 100%;
   max-width: 500px;
   margin-inline: 1.5rem;
