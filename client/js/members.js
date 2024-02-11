@@ -16,19 +16,33 @@ document.body.addEventListener("click", (e) => {
 triggerBtn.addEventListener("click", toggleOverlay);
 
 // TRIGGERS THE OVERLAY FOR THE PORTFOLIO INFORMATION
-const viewPortfolioBtn = document.querySelector(".view-portfolio");
-const portfolioOverlay = document.querySelector(".portfolio__details-overlay");
+const viewPortfolioBtn = document.querySelectorAll(".view-portfolio");
+const editPortfolioBtn = document.querySelectorAll(".edit-portfolio");
+const portfolioOverlays = document.querySelectorAll(
+  ".portfolio__details-overlay"
+);
+const editPortfolioOverlay = document.querySelectorAll(
+  ".edit__portfolio-container"
+);
 
-// ES6 Modules Syntax
-const togglePortfolioOverlay = () => {
-  portfolioOverlay.classList.add("show");
-};
+viewPortfolioBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    portfolioOverlays[index].classList.add("show");
+  });
+});
+
+editPortfolioBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    editPortfolioOverlay[index].classList.add("show");
+  });
+});
 
 // Close the overlay by clicking the body
 document.body.addEventListener("click", (e) => {
-  if (e.target.classList.contains("portfolio__details-overlay")) {
-    portfolioOverlay.classList.remove("show");
+  if (
+    e.target.classList.contains("portfolio__details-overlay") ||
+    e.target.classList.contains("edit__portfolio-container")
+  ) {
+    e.target.classList.remove("show");
   }
 });
-
-viewPortfolioBtn.addEventListener("click", togglePortfolioOverlay);
