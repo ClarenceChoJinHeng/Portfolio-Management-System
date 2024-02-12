@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) {
             <div class='portfolio__buttons'>
                 <button class='view-portfolio'>View</button>
                 <button class='edit-portfolio'>Edit</button>
-                <button class='delete-portfolio'>Delete</button>
+                <button class='delete-portfolio' data-id='" . $row['portfolioID'] . "'>Delete</button>
             </div>
        
 

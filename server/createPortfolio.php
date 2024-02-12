@@ -89,4 +89,7 @@ if (!empty($_POST)) {
         // JAVASCRIPT ALERT
         echo "<script>alert('Please fill in all the fields!'); window.history.back();</script>";
     }
+
+    // CLOSE THE CONNECTION
+    mysqli_close($conn);
 }
