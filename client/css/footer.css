@@ -1,0 +1,130 @@
+footer {
+  margin-top: 10rem;
+  height: max-content;
+  border: 1px solid var(--accent);
+  padding-bottom: 2rem;
+}
+
+/* <!-- ======= PORTFOLIO FOOTER TITLE ======== --> */
+
+.title__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 20rem;
+  margin: 2rem 0rem 0rem 1.5rem;
+  height: max-content;
+}
+
+.footer__link {
+  color: var(--accent);
+}
+
+.label__container {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.25rem;
+}
+
+.label__description {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* <!-- ======== CONTACT INFORMATION ========= --> */
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 25rem;
+  margin: 2rem 0rem 0rem 1.5rem;
+}
+
+.contact__information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.bxs-phone,
+.bxs-envelope,
+.bxs-location-plus {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* <!-- ======== NAV LINK ======== --> */
+
+.footer__nav {
+  margin: 2rem 0rem 0rem 1.5rem;
+  width: max-content;
+  height: max-content;
+}
+
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.nav__container a {
+  font-size: 0.8rem;
+  color: black;
+  width: max-content;
+}
+
+/* <!-- ======== SOCIAL LINKS ========= --> */
+
+.links__container {
+  margin: 2rem 0rem 0rem 1.5rem;
+  width: max-content;
+  height: max-content;
+}
+
+.bxl-instagram-alt,
+.bxl-facebook-square,
+.bxl-linkedin-square {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* ======== RESPOSIVE DESIGN ========= */
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    justify-content: center;
+    margin-inline: 16rem;
+  }
+
+  .port__contact {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .label__description {
+    max-width: max-content;
+  }
+
+  .nav__social {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    display: flex;
+  }
+
+  @media screen and (max-width: 491px) {
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
