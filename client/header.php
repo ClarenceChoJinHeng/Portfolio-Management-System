@@ -45,6 +45,7 @@
               <i class='bx bx-chevron-down'></i>
 
               <div class='nav__dropdown'>
+                <a href='#' class='nav__dropdown-links toggle__menu'>Menu</a>
                 <a href='members.php' class='nav__dropdown-links'>Dashboard</a>
                 <a href='../server/logout.php' class='nav__dropdown-links'>Logout</a>
               </div>
