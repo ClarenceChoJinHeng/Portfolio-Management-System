@@ -1,20 +1,19 @@
-footer {
-  margin-top: 10rem;
-  height: max-content;
-  border: 1px solid var(--accent);
-  padding-bottom: 2rem;
+.footer__container {
+  margin: 1.5rem;
+}
+
+.port__contact,
+.nav__social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav__social {
+  margin-top: 1rem;
 }
 
 /* <!-- ======= PORTFOLIO FOOTER TITLE ======== --> */
-
-.title__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 20rem;
-  margin: 2rem 0rem 0rem 1.5rem;
-  height: max-content;
-}
 
 .footer__link {
   color: var(--accent);
@@ -34,14 +33,6 @@ footer {
 
 /* <!-- ======== CONTACT INFORMATION ========= --> */
 
-.contact__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 25rem;
-  margin: 2rem 0rem 0rem 1.5rem;
-}
-
 .contact__information {
   display: flex;
   align-items: center;
@@ -59,12 +50,6 @@ footer {
 
 /* <!-- ======== NAV LINK ======== --> */
 
-.footer__nav {
-  margin: 2rem 0rem 0rem 1.5rem;
-  width: max-content;
-  height: max-content;
-}
-
 .nav__container {
   display: flex;
   flex-direction: column;
@@ -79,12 +64,6 @@ footer {
 
 /* <!-- ======== SOCIAL LINKS ========= --> */
 
-.links__container {
-  margin: 2rem 0rem 0rem 1.5rem;
-  width: max-content;
-  height: max-content;
-}
-
 .bxl-instagram-alt,
 .bxl-facebook-square,
 .bxl-linkedin-square {
@@ -94,37 +73,36 @@ footer {
 
 /* ======== RESPOSIVE DESIGN ========= */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .footer__container {
-    display: flex;
-    justify-content: center;
-    margin-inline: 16rem;
-  }
-
-  .port__contact {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .label__description {
-    max-width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .nav__social {
-    display: flex;
-    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .nav__description {
+    width: 200px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .footer__container {
-    display: flex;
+@media screen and (min-width: 768px) {
+  .port__contact {
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  @media screen and (max-width: 491px) {
-    .footer__container {
-      display: flex;
-      flex-direction: column;
-    }
+  .nav__social {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    margin: 1.5rem 0 1.5rem 0;
   }
 }

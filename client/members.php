@@ -95,9 +95,4 @@ include("guard_members.php");
     <script src="js/members.js"></script>
 </body>
 
-<!-- THIS IS HOW YOU CAN INCLUDE FILES SO YOU CAN REUSE THEM (FOOTER) -->
-<?php
-include("footer.php");
-?>
-
 </html>

@@ -1,10 +1,16 @@
 const navMenu = document.querySelector(".nav__mobile-links");
 const hamburger = document.querySelector(".bx-menu");
+const toggleMenuBtn = document.querySelector(".toggle__menu");
+const navDropdown = document.querySelector(".nav__dropdown");
 
 // FUNCTIONS
 const toggleMenu = (e) => {
   navMenu.classList.toggle("show");
   e.stopPropagation(); // Stop the event from bubbling up to the body
+
+  if (navDropdown) {
+    navDropdown.classList.remove("show");
+  }
 };
 
 // Close the menu when clicking outside of it
@@ -13,11 +19,19 @@ document.body.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
       navMenu.classList.remove("show");
     }
+  } else if (navMenu && toggleMenuBtn) {
+    if (!navMenu.contains(e.target) && !toggleMenuBtn.contains(e.target)) {
+      navMenu.classList.remove("show");
+    }
   }
 });
 
 if (hamburger) {
   hamburger.addEventListener("click", toggleMenu);
+}
+
+if (toggleMenuBtn) {
+  toggleMenuBtn.addEventListener("click", toggleMenu);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,3 +92,4 @@ if (dropdownBtn) {
     });
   });
 }
+
