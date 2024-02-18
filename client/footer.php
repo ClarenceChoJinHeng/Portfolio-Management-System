@@ -38,7 +38,7 @@
         <!-- ======== CONTACT INFORMATION ========= -->
         <div class="contact__container">
           <label class="contact__label">
-            <u>Contact Information</u>
+            <span>Contact Information</span>
           </label>
 
           <div class="contact__information">
@@ -62,7 +62,7 @@
       <!-- ======== NAV LINK ======== -->
       <div class="nav__social">
         <nav class="footer__nav">
-          <label class="nav__label"><u>Navigation Links</u></label>
+          <label class="nav__label"><span>Navigation Links</span></label>
 
           <div class="nav__container">
             <a href="index.php">Home</a>
@@ -73,7 +73,9 @@
 
         <!-- ======== SOCIAL LINKS ========= -->
         <div class="links__container">
-          <label class="social__title"><u>Social Links</u></label>
+          <label class="social__title">
+            <span>Social Links</span>
+          </label>
 
           <div class="social__links">
             <a href="" class="instagram"><i class='bx bxl-instagram-alt'></i></a>
