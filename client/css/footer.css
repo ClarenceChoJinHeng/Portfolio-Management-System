@@ -6,11 +6,11 @@
 .nav__social {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav__social {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* <!-- ======= PORTFOLIO FOOTER TITLE ======== --> */
@@ -69,6 +69,32 @@
 .bxl-linkedin-square {
   font-size: 1.5rem;
   color: var(--accent);
+}
+
+.social__links,
+.nav__container {
+  margin-top: 0.5rem;
+}
+
+.social__title span,
+.nav__label span,
+.contact__label span {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.social__title span::after,
+.nav__label span::after,
+.contact__label span::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: var(--accent);
+  bottom: -3px;
+  left: 0;
+  border-radius: 0.25rem;
 }
 
 /* ======== RESPOSIVE DESIGN ========= */

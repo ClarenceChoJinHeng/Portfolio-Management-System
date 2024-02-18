@@ -1,3 +1,146 @@
 @import url(style.css);
 
 /* MANAGED BY JAKE */
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about__container {
+  text-align: center;
+  max-width: 400px;
+  margin-inline: 1.5rem;
+  margin-top: 4rem;
+}
+
+.about__container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about__container p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+.about__portfolio {
+  margin: 8rem 1.5rem;
+}
+
+.about__portfolio-image {
+  display: grid;
+  place-content: center;
+}
+
+.about__portfolio-image img {
+  width: 100%;
+  border-radius: 0.25rem;
+  max-width: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about__portfolio-description {
+  margin-top: 1.5rem;
+}
+
+.about__portfolio-description p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  margin-top: 0.75rem;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.about__portfolio-description a {
+  border: 1px solid var(--accent);
+  padding: 0.65rem 1.25rem;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.about__portfolio-description a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.our__mission {
+  margin-inline: 1.5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-slide {
+  height: initial;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  width: initial;
+  height: initial;
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  padding: 6px;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  color: black;
+}
+
+.swiper-button-prev {
+  left: calc(50% - 2.75rem);
+}
+
+.swiper-button-next {
+  right: calc(50% - 2.75rem);
+}
+
+.our__mission-information {
+  padding: 2rem 0 5rem;
+}
+
+.our__mission h2 {
+  text-align: center;
+}
+
+.mission {
+  padding-bottom: 3rem;
+}
+
+.mission__info {
+  border: 1px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 0.85rem;
+}
+
+.mission__info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.mission__info p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  margin-top: 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .about__portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about__portfolio-description {
+    margin: 0;
+  }
+}

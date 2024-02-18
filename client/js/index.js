@@ -1,28 +1,35 @@
-var swiper = new Swiper(".latest__portfolio-container", {
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+var swiperContainers = [
+  ".latest__portfolio-container",
+  ".our__mission-information",
+];
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+swiperContainers.forEach(function (container) {
+  new Swiper(container, {
+    spaceBetween: 32,
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
 
-  // Breakpoints
-  breakpoints: {
-    // when window width is >= 576px
-    576: {
-      slidesPerView: 2,
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    1024: {
-      slidesPerView: 3,
+
+    // Breakpoints
+    breakpoints: {
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
     },
-  },
+  });
 });
 
 // REDIRECT TO SIGNUP PAGE
