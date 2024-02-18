@@ -1,8 +1,37 @@
-// REDIRECT TO SIGNUP PAGE
-const redirectSignupBtn = document.querySelector(".redirect__signup-btn");
+var swiper = new Swiper(".latest__portfolio-container", {
+  spaceBetween: 32,
+  slidesPerView: "auto",
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
-if (redirectSignupBtn) {
-  redirectSignupBtn.addEventListener("click", () => {
-    window.location.href = "signup.php";
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // Breakpoints
+  breakpoints: {
+    // when window width is >= 576px
+    576: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// REDIRECT TO SIGNUP PAGE
+const redirectSignupBtn = document.querySelectorAll(".redirect__signup-btn");
+
+if (redirectSignupBtn.length > 0) {
+  redirectSignupBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      window.location.href = "signup.php";
+    });
   });
 }
