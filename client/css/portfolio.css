@@ -1,0 +1,104 @@
+@import url(style.css);
+
+.portfolio__container {
+  margin: 6rem 1.5rem;
+}
+
+.portfolio__container h1 {
+  text-align: center;
+}
+
+.form__keywords {
+  display: flex;
+  justify-content: center;
+}
+
+.search__keywords {
+  margin-top: 1rem;
+  border: 1px solid var(--accent);
+  max-width: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-family: var(--font);
+  outline: none;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.portfolio__item h2 {
+  margin-top: 1rem;
+}
+
+.portfolio__item img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.portfolio__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio__item {
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease-in-out;
+  padding: 1.5rem;
+}
+
+.portfolio__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.view-portfolio {
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--accent);
+  background: #fff;
+  font-size: 0.75rem;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.view-portfolio:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio__container {
+    margin: 6rem 0;
+  }
+}
