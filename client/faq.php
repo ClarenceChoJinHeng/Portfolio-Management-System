@@ -19,7 +19,8 @@ include("header.php");
     <main class="main__container container">
         <section class="faq__container">
             <h1 class="faq__title">FAQs</h1>
-            <div class="first__faq">
+            
+            <div class="faq__div__container">
                 <div class="faq__div">
                     <i class='bx bx-chevron-down'></i> <p>What is the purpose of this portfolio?</p>
                 </div>
@@ -29,7 +30,7 @@ include("header.php");
                 </div>
             </div>
 
-            <div class="second__faq">
+            <div class="faq__div__container">
                 <div class="faq__div">
                     <i class='bx bx-chevron-down'></i><p>Will portfolio improve in their development</p> 
                 </div> 
@@ -39,7 +40,7 @@ include("header.php");
                 </div>
             </div>
 
-            <div class="third__faq">
+            <div class="faq__div__container">
                 <div class="faq__div">
                     <i class='bx bx-chevron-down'></i><p>How long will portfolio website take to improve?</p>  
                 </div>
@@ -49,7 +50,7 @@ include("header.php");
                 </div>
             </div>
 
-            <div class="fourth__faq">
+            <div class="faq__div__container">
                 <div class="faq__div">
                     <i class='bx bx-chevron-down'></i> <p>Do portfolio collaborate with other professionals?</p>  
                 </div>
@@ -59,7 +60,7 @@ include("header.php");
                 </div>
             </div>
             
-            <div class="fifth__faq">
+            <div class="faq__div__container">
                 <div class="faq__div">
                     <i class='bx bx-chevron-down'></i> <p>How long have portfolio been around?</p>
                 </div>  

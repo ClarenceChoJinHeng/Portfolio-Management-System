@@ -6,14 +6,11 @@
   margin-left: 1rem;
 }
 
-.first__faq,
-.second__faq,
-.third__faq,
-.fourth__faq,
-.fifth__faq {
+.faq__div__container {
   border: 1px solid var(--accent);
   text-align: justify;
   margin: 1rem;
+  border: 1px solid var(--accent);
 }
 
 .faq__div {
@@ -22,12 +19,10 @@
   margin-top: 1rem;
   align-items: center;
   position: relative;
-  /* gap: 1rem; */
   font-size: 0.8rem;
 }
 
 .description__container {
-  max-width: 20rem;
   font-size: 0.75rem;
   /* border: 1px solid black; */
   margin: 1rem 1rem;

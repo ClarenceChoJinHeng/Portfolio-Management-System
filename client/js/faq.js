@@ -1,20 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const faqDivs = document.querySelectorAll(".faq__div");
+const faqDivContainers = document.querySelectorAll(".faq__div__container");
 
-  faqDivs.forEach(function (faqDiv) {
-    faqDiv.addEventListener("click", function () {
-      const descriptionContainer = faqDiv.nextElementSibling;
-      const description =
-        descriptionContainer.querySelector(".faq__description");
-      const icon = faqDiv.querySelector("i");
+faqDivContainers.forEach(function (faqDivContainer) {
+  const faqDiv = faqDivContainer.querySelector(".faq__div");
+  const descriptionContainer = faqDivContainer.querySelector(
+    ".description__container"
+  );
+  const description = descriptionContainer.querySelector(".faq__description");
+  const icon = faqDiv.querySelector("i");
 
-      if (description.style.display === "none") {
-        description.style.display = "block";
-        icon.style.transform = "rotate(180deg)";
-      } else {
-        description.style.display = "none";
-        icon.style.transform = "rotate(0deg)";
-      }
-    });
+  faqDiv.addEventListener("click", function () {
+    if (description.style.display === "none" || !description.style.display) {
+      description.style.display = "block";
+      icon.style.transform = "rotate(180deg)";
+    } else {
+      description.style.display = "none";
+      icon.style.transform = "rotate(0deg)";
+    }
   });
 });
