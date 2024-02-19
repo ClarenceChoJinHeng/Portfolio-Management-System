@@ -1,3 +1,49 @@
 @import url(style.css);
 
 /* MANAGED BY JAKE */
+
+.faq__title {
+  margin-left: 1rem;
+}
+
+.first__faq,
+.second__faq,
+.third__faq,
+.fourth__faq,
+.fifth__faq {
+  border: 1px solid var(--accent);
+  text-align: justify;
+  margin: 1rem;
+}
+
+.faq__div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  align-items: center;
+  position: relative;
+  /* gap: 1rem; */
+  font-size: 0.8rem;
+}
+
+.description__container {
+  max-width: 20rem;
+  font-size: 0.75rem;
+  /* border: 1px solid black; */
+  margin: 1rem 1rem;
+}
+
+.faq__description {
+  display: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media screen and (min-width: 768px) {
+  .main__container {
+    position: relative;
+    border: 1px solid black;
+    padding: 1rem;
+    justify-content: center;
+  }
+}

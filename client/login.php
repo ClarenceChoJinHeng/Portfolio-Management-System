@@ -1,5 +1,5 @@
-<!-- MANAGED BY JAKE -->
 <!DOCTYPE html>
+<!-- MANAGED BY JAKE -->
 <html lang="en">
 
 <head>
