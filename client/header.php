@@ -24,12 +24,6 @@
       <i class='bx bxs-report'></i>
     </div>
 
-    <div class="nav__desktop-links">
-      <a href="index.php" class="nav__link">Home</a>
-      <a href="about.php" class="nav__link">About</a>
-      <a href="faq.php" class="nav__link">FAQs</a>
-    </div>
-
     <?php
 
     session_start();
@@ -39,6 +33,13 @@
         $_SESSION['role'] == 'user' || $_SESSION['role'] == 'admin'
       ) {
         echo "
+        <div class='nav__desktop-links'>
+          <a href='index.php' class='nav__link'>Home</a>
+          <a href='about.php' class='nav__link'>About</a>
+          <a href='faq.php' class='nav__link'>FAQs</a>
+          <a href='portfolio.php' class='nav__link'>Portfolio</a>
+        </div>
+
           <div class='nav__username'>
             <div>
               <p>" . $_SESSION['username'] . "</p>
@@ -55,6 +56,12 @@
       }
     } else {
       echo "
+      <div class='nav__desktop-links'>
+        <a href='index.php' class='nav__link'>Home</a>
+        <a href='about.php' class='nav__link'>About</a>
+        <a href='faq.php' class='nav__link'>FAQs</a>
+      </div>
+
       <div class='nav__menu'>
         <i class='bx bx-user-circle'></i>
         <i class='bx bx-menu'></i>
@@ -67,11 +74,31 @@
 
   </nav>
 
-  <div class="nav__mobile-links">
-    <a href="index.php" class="nav__link">Home</a>
-    <a href="about.php" class="nav__link">About</a>
-    <a href="faq.php" class="nav__link">FAQs</a>
-  </div>
+  <?php
+
+  if (isset($_SESSION['role'])) {
+    if (
+      $_SESSION['role'] == 'user' || $_SESSION['role'] == 'admin'
+    ) {
+      echo "
+      <div class='nav__mobile-links'>
+        <a href='index.php' class='nav__link'>Home</a>
+        <a href='about.php' class='nav__link'>About</a>
+        <a href='faq.php' class='nav__link'>FAQs</a>
+        <a href='portfolio.php' class='nav__link'>Portfolio</a>
+      </div>
+      ";
+    }
+  } else {
+    echo "
+    <div class='nav__mobile-links'>
+      <a href='index.php' class='nav__link'>Home</a>
+      <a href='about.php' class='nav__link'>About</a>
+      <a href='faq.php' class='nav__link'>FAQs</a>
+    </div>
+    ";
+  }
+  ?>
 </header>
 
 <!-- JAVASCRIPT -->

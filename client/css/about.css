@@ -144,3 +144,9 @@
     margin: 0;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .our__mission {
+    margin-inline: 0;
+  }
+}
