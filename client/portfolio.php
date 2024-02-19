@@ -12,6 +12,7 @@
 <!-- THIS IS HOW YOU CAN INCLUDE FILES SO YOU CAN REUSE THEM (HEADER) -->
 <?php
 include("header.php");
+include("guard_members.php");
 ?>
 
 <body>
@@ -40,7 +41,7 @@ include("header.php");
                         $keywords = mysqli_real_escape_string($conn, $_POST['keywords']);
 
                         // SQL Query to search the portfolios
-                        $sql = "SELECT portfolio.*, users.username 
+                        $sql = "SELECT portfolio.*, users.username, users.email
                                 FROM portfolio 
                                 INNER JOIN users ON portfolio.userID = users.userID 
                                 WHERE title LIKE '%$keywords%'";
@@ -62,6 +63,28 @@ include("header.php");
                                             <p>Created by: " . $row['username'] . "</p>
                                             <button class='view-portfolio'>View</button>
                                         </div>
+
+                                        <div class='portfolio__overlay'>
+                                            <div class='portfolio__details'>
+                                                <h2>More Information</h2>
+                                                <div>
+                                                    <label>Description</label>
+                                                    <p>" . $row['description'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Skills</label>
+                                                    <p>" . $row['skills'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Education</label>
+                                                    <p>" . $row['education'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Contact Email</label>
+                                                    <p>" . $row['email'] . "</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 ";
                             }
@@ -73,7 +96,7 @@ include("header.php");
                         // Include the database connection
                         include("../server/connection.php");
                         // ECHO ALL THE PORTFOLIO'S WITH LIMIT 10
-                        $sql = "SELECT portfolio.*, users.username
+                        $sql = "SELECT portfolio.*, users.username, users.email
                                 FROM portfolio 
                                 INNER JOIN users ON portfolio.userID = users.userID 
                                 LIMIT 10";
@@ -86,15 +109,39 @@ include("header.php");
                             // LOOP THROUGH THE PORTFOLIO
                             while ($row = mysqli_fetch_assoc($result)) {
                                 // DISPLAY THE PORTFOLIO
-                                echo "<div class='portfolio__item'>
+                                echo "
+                                    <div class='portfolio__item'>
                                         <img src='../images/" . $row['imagePath'] . "' alt='Portfolio Image'>
                                         <h2>" . $row['title'] . "</h2>
-
+                                        
                                         <div class='portfolio__buttons'>
                                             <p>Created by: " . $row['username'] . "</p>
                                             <button class='view-portfolio'>View</button>
                                         </div>
-                                    </div>";
+
+                                        <div class='portfolio__overlay'>
+                                            <div class='portfolio__details'>
+                                                <h2>More Information</h2>
+                                                <div>
+                                                    <label>Description</label>
+                                                    <p>" . $row['description'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Skills</label>
+                                                    <p>" . $row['skills'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Education</label>
+                                                    <p>" . $row['education'] . "</p>
+                                                </div>
+                                                <div>
+                                                    <label>Contact Email</label>
+                                                    <p>" . $row['email'] . "</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ";
                             }
                         } else {
                             // IF THERE IS NO PORTFOLIO
@@ -112,5 +159,8 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
+
+<!-- PORTFOLIO JS -->
+<script src="js/portfolio.js"></script>
 
 </html>
