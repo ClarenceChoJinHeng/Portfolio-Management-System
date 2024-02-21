@@ -2,21 +2,21 @@
 
 /* MANAGED BY JAKE */
 
-.faq__title {
-  margin-left: 1rem;
+.faq__container {
+  margin: 5rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .faq__div__container {
-  border: 1px solid var(--accent);
-  text-align: justify;
-  margin: 1rem;
   border: 1px solid var(--accent);
 }
 
 .faq__div {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
+  gap: 0.5rem;
+  margin: 1rem 0 0 0.5rem;
   align-items: center;
   position: relative;
   font-size: 0.8rem;
@@ -32,13 +32,8 @@
   display: none;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-
-@media screen and (min-width: 768px) {
-  .main__container {
-    position: relative;
-    border: 1px solid black;
-    padding: 1rem;
-    justify-content: center;
+@media screen and (min-width: 1024px) {
+  .faq__container {
+    margin: 5rem 0;
   }
 }
