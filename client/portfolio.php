@@ -45,7 +45,7 @@ include("guard_members.php");
                                 FROM portfolio 
                                 INNER JOIN users ON portfolio.userID = users.userID 
                                 WHERE title LIKE '%$keywords%'";
-
+ 
                         // Execute the query
                         $result = mysqli_query($conn, $sql);
 
