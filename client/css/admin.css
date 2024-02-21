@@ -1,0 +1,59 @@
+@import url(style.css);
+
+.admin-dashboard {
+  margin: 6rem 1.5rem;
+}
+
+.admin-dashboard h1 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.admin__rules-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.admin__todo,
+.admin__cant-do {
+  border: 1px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.admin__todo h2,
+.admin__cant-do h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.admin__ul-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin__ul-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.admin__ul-list li i {
+  font-size: 1.5rem;
+}
+
+.bxs-checkbox-checked {
+  color: lightgreen;
+}
+
+.bxs-checkbox-minus {
+  color: red;
+}
+
+@media screen and (min-width: 576px) {
+  .admin__rules-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
