@@ -52,8 +52,102 @@
   color: red;
 }
 
+/* ADMIN USERS */
+.admin__users-container {
+  margin: 6rem 1.5rem;
+}
+
+.admin__users-container h2 {
+  text-align: center;
+}
+
+.admin__users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.admin__users-table tr:first-child {
+  background: hsl(344, 57%, 75%);
+}
+
+.admin__users-table th {
+  padding: 1rem;
+  border: 1px solid var(--accent);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.admin__users-table td {
+  border: 1px solid var(--accent);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.table__buttons {
+  border: 1px solid var(--accent);
+  color: black;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.table__buttons:hover {
+  background: var(--accent);
+  color: var(--White);
+}
+
+.action__td {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.65rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  width: 100%;
+  font-family: var(--font);
+}
+
+input[type="text"]:focus {
+  outline: 1.5px solid var(--accent);
+}
+
+input[type="submit"] {
+  padding: 0.65rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  background: var(--White);
+  font-family: var(--font);
+}
+
+input[type="submit"]:hover {
+  background: var(--accent);
+  color: var(--White);
+}
+
 @media screen and (min-width: 576px) {
   .admin__rules-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .admin__users-container {
+    margin: 6rem auto;
   }
 }
