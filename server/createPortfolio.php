@@ -68,7 +68,13 @@ if (!empty($_POST)) {
                     // Check if the query was successful
                     if ($create_portfolio_result) {
                         // ALERT USING JAVASCRIPT
-                        echo "<script>alert('Portfolio created successfully!'); window.location.href='../client/members.php';</script>";
+                        // If the session is admin, redirect to admin dashboard
+                        if ($_SESSION['role'] == "admin") {
+                            echo "<script>alert('Portfolio created successfully!'); window.location.href='../client/admin/admin-portfolio.php';</script>";
+                        } else {
+                            // If the session is client, redirect to client dashboard
+                            echo "<script>alert('Portfolio created successfully!'); window.location.href='../client/members.php';</script>";
+                        }
                     } else {
                         // ALERT USING JAVASCRIPT
                         echo "<script>alert('Failed to create portfolio!'); window.history.back();</script>";

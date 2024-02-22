@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Include the database configuration file
 include("connection.php");
 
@@ -29,7 +31,13 @@ if (!empty($_POST)) {
 
         // EXECUTE THE QUERY
         if (mysqli_query($conn, $update_query)) {
-            echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/members.php';</script>";
+            // IF SESSION[role] = admin, redirect to admin-portfolio.php
+            // ELSE, redirect to members.php
+            if ($_SESSION['role'] == 'admin') {
+                echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/admin/admin-portfolio.php';</script>";
+            } else {
+                echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/members.php';</script>";
+            }
         } else {
             // ALERT USING JAVASCRIPT
             echo "<script>alert('Failed to update portfolio!'); window.history.back();</script>";
@@ -45,7 +53,7 @@ if (!empty($_POST)) {
         if (file_exists($old_image_path)) {
             unlink($old_image_path);
         }
-        
+
         // UPDATE PORTFOLIO WITH IMAGE
         // Get the image file name
         $image_name = $_FILES['image']['name'];
@@ -82,7 +90,13 @@ if (!empty($_POST)) {
 
                     // EXECUTE THE QUERY
                     if (mysqli_query($conn, $update_query)) {
-                        echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/members.php';</script>";
+                        // IF SESSION[role] = admin, redirect to admin-portfolio.php
+                        // ELSE, redirect to members.php
+                        if ($_SESSION['role'] == 'admin') {
+                            echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/admin/admin-portfolio.php';</script>";
+                        } else {
+                            echo "<script>alert('Portfolio updated successfully!'); window.location.href='../client/members.php';</script>";
+                        }
                     } else {
                         // ALERT USING JAVASCRIPT
                         echo "<script>alert('Failed to update portfolio!'); window.history.back();</script>";
