@@ -15,6 +15,7 @@ if ($result) {
     if (mysqli_num_rows($result) > 0) {
         // Output the users in a table
         echo "<form method='POST' action='../../server/createAndEditUser.php'>";
+        echo "<div class='table-container'>";
         echo "<table class='admin__users-table'>";
         echo "<tr>";
         echo "<th>User ID</th>";
@@ -52,11 +53,12 @@ if ($result) {
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['password'] . "</td>";
             echo "<td>" . $row['role'] . "</td>";
-            echo "<td class='action__td'><a class='table__buttons' href='admin-users.php?action=edit&id=" . $row['userID'] . "'>Edit</a>  <a class='table__buttons' href='deleteUser.php?id=" . $row['userID'] . "'>Delete</a></td>";
+            echo "<td class='action__td'><a class='table__buttons' href='admin-users.php?action=edit&id=" . $row['userID'] . "'>Edit</a>  <a class='table__buttons' href='../../server/deleteUser.php?id=" . $row['userID'] . "'>Delete</a></td>";
             echo "</tr>";
         }
 
         echo "</table>";
+        echo "</div>";
     } else {
         // If there are no users in the database, output a message
         echo "No users found";

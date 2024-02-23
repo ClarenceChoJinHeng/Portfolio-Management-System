@@ -13,7 +13,9 @@ document.body.addEventListener("click", (e) => {
   }
 });
 
-triggerBtn.addEventListener("click", toggleOverlay);
+if (triggerBtn) {
+  triggerBtn.addEventListener("click", toggleOverlay);
+}
 
 // TRIGGERS THE OVERLAY FOR THE PORTFOLIO INFORMATION
 const viewPortfolioBtn = document.querySelectorAll(".view-portfolio");
@@ -42,13 +44,19 @@ editPortfolioBtn.forEach((btn, index) => {
 deletePortfolioBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     alert("Are you sure you want to delete this portfolio?");
-    
+
     const portfolioID = btn.dataset.id;
 
     // Create a form
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = "../server/deletePortfolio.php";
+
+    // If the path is different, change the action
+    if (window.location.pathname.includes("admin")) {
+      form.action = "../../server/deletePortfolio.php";
+    } else {
+      form.action = "../server/deletePortfolio.php";
+    }
 
     // Create an input for the portfolio id
     const input = document.createElement("input");
