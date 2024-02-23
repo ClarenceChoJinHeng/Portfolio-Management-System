@@ -23,22 +23,32 @@ include("header.php");
                     <div class="form__inputs">
                         <div class="form__input">
                             <label for="username">Username</label>
-                            <input type="text" id="username" name="username" placeholder="Enter your username">
+                            <!-- RETAIN THE VALUE -->
+                            <input type="text" id="username" name="username" placeholder="Enter your username" value="<?php if (isset($_SESSION['username'])) {
+                                                                                                                            echo $_SESSION['username'];
+                                                                                                                        }
+                                                                                                                        ?>">
                         </div>
                         <div class="form__input">
                             <label for="age">Age</label>
-                            <input type="number" id="age" name="age" placeholder="Enter your age">
+                            <input type="number" id="age" name="age" placeholder="Enter your age" value="<?php if (isset($_SESSION['age'])) {
+                                                                                                                echo $_SESSION['age'];
+                                                                                                            }
+                                                                                                            ?>">
                         </div>
                         <div class="form__input">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" value="<?php if (isset($_SESSION['email'])) {
+                                                                                                                    echo $_SESSION['email'];
+                                                                                                                }
+                                                                                                                ?>">
                         </div>
                         <div class="form__input">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Enter your password">
                         </div>
                         <!-- SUBMIT BUTTON -->
-                        <button class="submit__button" type="submit">Submit</button>
+                        <button class="submit__button" name="signup" type="submit">Submit</button>
                     </div>
                 </form>
             </div>

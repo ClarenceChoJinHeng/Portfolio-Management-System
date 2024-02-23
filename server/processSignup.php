@@ -1,15 +1,27 @@
 <?php
 
+session_start();
+
 include("connection.php");
 
-if (!empty($_POST)) {
+if (isset($_POST['signup'])) {
     // GET THE DATA FROM THE FORM
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $age = mysqli_real_escape_string($conn, $_POST['age']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
+    // DATA RETAIN (SESSION)
+    $_SESSION['username'] = $username;
+    $_SESSION['age'] = $age;
+    $_SESSION['email'] = $email;
+
     // VALIDATION FOR THE DATA
+    if (empty($username) && empty($age) && empty($email) && empty($password)) {
+        die("<script>alert('Form cannot be empty');
+        window.history.back();</script>");
+    }
+
     if (empty($username)) {
         die("<script>alert('Please fill in your username');
         window.history.back();</script>");
@@ -50,6 +62,12 @@ if (!empty($_POST)) {
 
     // EXECUTE THE QUERY
     if (mysqli_query($conn, $execute_query)) {
+
+        // UNSET THE SESSION
+        unset($_SESSION['username']);
+        unset($_SESSION['age']);
+        unset($_SESSION['email']);
+
         echo "<script>alert('Signup successful');
         window.location.href = '../client/login.php';</script>";
     } else {
@@ -60,4 +78,3 @@ if (!empty($_POST)) {
     // CLOSE THE CONNECTION
     mysqli_close($conn);
 }
-?>
