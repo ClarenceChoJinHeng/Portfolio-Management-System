@@ -1,5 +1,5 @@
 <?php
-
+// CLARENCE
 session_start();
 
 // Include the database connection file
