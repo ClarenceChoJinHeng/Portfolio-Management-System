@@ -1,4 +1,4 @@
-<!-- MANAGED BY JAKE -->
+<!-- Managed By Jake -->
 
 <!DOCTYPE html>
 <html lang="en">
