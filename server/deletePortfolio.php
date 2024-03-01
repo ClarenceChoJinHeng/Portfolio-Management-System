@@ -1,5 +1,6 @@
 <?php
-// CLARENCE AND JUSTIN
+// CLARENCE 
+// CODE REUSE FOR ADMIN BY JAKE
 include("connection.php");
 
 if (!empty($_POST)) {

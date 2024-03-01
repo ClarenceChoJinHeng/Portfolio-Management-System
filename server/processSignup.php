@@ -1,4 +1,5 @@
 <?php
+// KAI HONG
 
 session_start();
 
@@ -52,7 +53,7 @@ if (isset($_POST['signup'])) {
     }
 
     // VALIDATION FOR PASSWORD (MAKING SURE THE PASSWORD IS AT LEAST 8 CHARACTERS LONG)
-    if (strlen($password) < 8) {
+    if (strlen($password) < 8 || !preg_match("/[A-Z]{1,}/", $password) || !preg_match("/[a-z]{1,}/", $password) || !preg_match("/[0-9]{1,}/", $password)) {
         die("<script>alert('Please fill in a password that is at least 8 characters long');
         window.history.back();</script>");
     }
