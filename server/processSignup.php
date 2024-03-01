@@ -53,8 +53,17 @@ if (isset($_POST['signup'])) {
     }
 
     // VALIDATION FOR PASSWORD (MAKING SURE THE PASSWORD IS AT LEAST 8 CHARACTERS LONG)
-    if (strlen($password) < 8 || !preg_match("/[A-Z]{1,}/", $password) || !preg_match("/[a-z]{1,}/", $password) || !preg_match("/[0-9]{1,}/", $password)) {
+    if (strlen($password) < 8) {
         die("<script>alert('Please fill in a password that is at least 8 characters long');
+        window.history.back();</script>");
+    } else if (!preg_match("/[A-Z]{1,}/", $password)) {
+        die("<script>alert('Please fill in a password that contains at least 1 uppercase letter');
+        window.history.back();</script>");
+    } else if (!preg_match("/[a-z]{1,}/", $password)) {
+        die("<script>alert('Please fill in a password that contains at least 1 lowercase letter');
+        window.history.back();</script>");
+    } else if (!preg_match("/[0-9]{1,}/", $password)) {
+        die("<script>alert('Please fill in a password that contains at least 1 number');
         window.history.back();</script>");
     }
 
