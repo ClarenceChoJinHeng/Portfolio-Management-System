@@ -1,5 +1,5 @@
 <?php
-// JUSTIN
+// BEN FONG
 session_start();
 
 // Include the database configuration file
