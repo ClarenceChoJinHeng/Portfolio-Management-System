@@ -1,6 +1,7 @@
+<!-- Managed By Jake -->
+
 <?php
-// CLARENCE 
-// CODE REUSE FOR ADMIN BY JAKE
+
 include("connection.php");
 
 if (!empty($_POST)) {
